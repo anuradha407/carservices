@@ -1,0 +1,32 @@
+<div>
+
+  <!-- <h3>{{ car.car_number|capfirst }}</h3>
+  <p>{{ car.car_model}}</p>
+  {% if car.year_old %}
+  <p>YEAR_OLD: {{car.year_old}}</p>
+  {% endif %}
+  {% if car.service_type %}
+  <p>SERVICES TYPE: {{car.service_type}}</p>
+  {% endif %}
+  {% if car.year_old %}
+  <p>CAR NOTES: {{car.car_notes}}</p>
+  {% endif %}
+
+  {% if car.services.all %}
+  <p>servicing for :</p>
+
+  <ul>
+    {% for services in car.services.all %}
+    <li>{{ services.name}}</li>
+{% endfor %}
+
+  </ul>
+
+    {% endif %} -->
+  {% for i in car.all %}
+  <p>submitted by :{{ i.car_owner }}</p>
+  <p>submitted on :{{ i.submission_date|date:" M d Y " }}</p>
+  <P>{{ i.description }}</P>
+  {% endfor %}
+
+</div>
